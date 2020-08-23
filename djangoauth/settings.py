@@ -32,11 +32,12 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'django.contrib.admin',
-    'django.contrib.auth',  #  Make sure you have this line. 
+    'django.contrib.auth',  
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'account',  # Registering account app 
 ]
 
 MIDDLEWARE = [
@@ -68,6 +69,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'djangoauth.wsgi.application'
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  
 
 
 # Database
